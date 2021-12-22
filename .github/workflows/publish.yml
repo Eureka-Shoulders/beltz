@@ -22,9 +22,6 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      # - name: Test
-      #   run: npm run test --ci --coverage --maxWorkers=2
-
       - name: Generate build
         run: npm run build
 
