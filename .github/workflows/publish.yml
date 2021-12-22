@@ -15,19 +15,19 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@euk-labs'
-      
+
       - name: Install dependencies
         run: npm install
 
       - name: Lint
         run: npm run lint
 
-      - name: Test
-        run: npm run test --ci --coverage --maxWorkers=2
-      
+      # - name: Test
+      #   run: npm run test --ci --coverage --maxWorkers=2
+
       - name: Generate build
         run: npm run build
-      
+
       - name: Publish lib to NPM
         run: npm publish --access public
         env:
