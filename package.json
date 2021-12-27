@@ -1,7 +1,6 @@
 {
   "name": "@euk-labs/beltz",
   "version": "1.0.0",
-  "type": "module",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/types/index.d.ts",
