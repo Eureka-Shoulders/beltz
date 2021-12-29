@@ -1,12 +1,9 @@
 {
   "name": "@euk-labs/beltz",
-  "version": "2.1.0",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/types/index.d.ts",
-  "files": [
-    "lib"
-  ],
+  "version": "2.1.1",
+  "main": "./cjs/index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
   "keywords": [
     "eureka",
     "utils",
@@ -17,9 +14,10 @@
   "repository": "git@github.com:Eureka-Shoulders/beltz.git",
   "author": "Gabriel Silva <devzgabriel@gmail.com>",
   "license": "MIT",
+  "sideEffects": false,
   "scripts": {
     "clean": "rimraf lib",
-    "build": "node ./scripts/build.cjs && tsc --project ./tsconfig.json --emitDeclarationOnly",
+    "build": "node ./scripts/build.js && tsc --project ./tsconfig.json --emitDeclarationOnly",
     "lint": "tsc --project ./tsconfig.json && eslint src -c .eslintrc.json --ext tsx,ts",
     "test": "jest"
   },

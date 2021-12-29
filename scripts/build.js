@@ -34,13 +34,14 @@ rimraf(distFolder, (err) => {
     entryPoints: [...inputs],
     format: 'esm',
     outbase: sourceFolder,
-    outdir: distFolder + '/esm',
+    outdir: distFolder,
     target: 'es6',
     loader: {
       '.json': 'json',
     },
     tsconfig: 'tsconfig.json',
     minify: true,
+    splitting: true,
   });
   console.timeEnd('Generating ESM output...');
 
@@ -58,4 +59,9 @@ rimraf(distFolder, (err) => {
     minify: true,
   });
   console.timeEnd('Generating CJS output...');
+
+  fs.copyFileSync(
+    path.join('./package.json'),
+    path.join(distFolder, 'package.json')
+  );
 });
