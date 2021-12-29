@@ -1,5 +1,7 @@
-export function validateCNPJ(cnpj: any) {
-  cnpj = cnpj
+export function validateCNPJ(cnpjReceveid: string | number) {
+  let cnpj = String(cnpjReceveid).replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '')
+
+  let cnpjArray = cnpj
     .replace(/[^\d]+/g, '')
     .trim()
     .split('')
@@ -9,7 +11,7 @@ export function validateCNPJ(cnpj: any) {
   let v2 = 0
   let aux = false
 
-  cnpj.map((char: any, index: any, arr: any) => {
+  cnpjArray.map((char: number, index: number, arr: number[]) => {
     if (arr[index - 1] !== char) {
       aux = true
     }
@@ -25,9 +27,9 @@ export function validateCNPJ(cnpj: any) {
       index++, p1--, p2--
     ) {
       if (p1 >= 2) {
-        v1 += cnpj[index] * p1
+        v1 += cnpjArray[index] * p1
       } else {
-        v1 += cnpj[index] * p2
+        v1 += cnpjArray[index] * p2
       }
     }
 
@@ -39,15 +41,15 @@ export function validateCNPJ(cnpj: any) {
       v1 = 11 - v1
     }
 
-    if (v1 !== cnpj[12]) {
+    if (v1 !== cnpjArray[12]) {
       return false
     }
 
     for (let i = 0, p1 = 6, p2 = 14; cnpj.length - 1 > i; i++, p1--, p2--) {
       if (p1 >= 2) {
-        v2 += cnpj[i] * p1
+        v2 += cnpjArray[i] * p1
       } else {
-        v2 += cnpj[i] * p2
+        v2 += cnpjArray[i] * p2
       }
     }
 
@@ -59,7 +61,7 @@ export function validateCNPJ(cnpj: any) {
       v2 = 11 - v2
     }
 
-    if (v2 !== cnpj[13]) {
+    if (v2 !== cnpjArray[13]) {
       return false
     } else {
       return true
