@@ -1,13 +1,9 @@
 {
   "name": "@euk-labs/beltz",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/types/index.d.ts",
-  "files": [
-    "lib"
-  ],
+  "version": "2.1.0",
+  "main": "./index.js",
+  "module": "./esm/index.js",
+  "types": "./index.d.ts",
   "keywords": [
     "eureka",
     "utils",
@@ -20,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf lib",
-    "build": "node ./scripts/build.cjs && tsc --project ./tsconfig.json --emitDeclarationOnly",
+    "build": "node ./scripts/build.js && tsc --project ./tsconfig.json --emitDeclarationOnly",
     "lint": "tsc --project ./tsconfig.json && eslint src -c .eslintrc.json --ext tsx,ts",
     "test": "jest"
   },

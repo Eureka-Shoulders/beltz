@@ -49,7 +49,7 @@ rimraf(distFolder, (err) => {
     entryPoints: [...inputs],
     format: 'cjs',
     outbase: sourceFolder,
-    outdir: distFolder + '/cjs',
+    outdir: distFolder,
     target: 'es6',
     loader: {
       '.json': 'json',
@@ -58,4 +58,9 @@ rimraf(distFolder, (err) => {
     minify: true,
   });
   console.timeEnd('Generating CJS output...');
+
+  fs.copyFileSync(
+    path.join('./package.json'),
+    path.join(distFolder, 'package.json')
+  );
 });
