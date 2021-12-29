@@ -34,13 +34,14 @@ rimraf(distFolder, (err) => {
     entryPoints: [...inputs],
     format: 'esm',
     outbase: sourceFolder,
-    outdir: distFolder + '/esm',
+    outdir: distFolder,
     target: 'es6',
     loader: {
       '.json': 'json',
     },
     tsconfig: 'tsconfig.json',
     minify: true,
+    splitting: true,
   });
   console.timeEnd('Generating ESM output...');
 
@@ -49,7 +50,7 @@ rimraf(distFolder, (err) => {
     entryPoints: [...inputs],
     format: 'cjs',
     outbase: sourceFolder,
-    outdir: distFolder,
+    outdir: distFolder + '/cjs',
     target: 'es6',
     loader: {
       '.json': 'json',
