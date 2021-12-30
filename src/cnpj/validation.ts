@@ -1,7 +1,7 @@
 export function validateCNPJ(cnpjReceveid: string | number) {
-  let cnpj = String(cnpjReceveid).replace(/[&/\\#,+()$~%.'":*?<>{}-]/g, '');
+  const cnpj = String(cnpjReceveid).replace(/[&/\\#,+()$~%.'":*?<>{}-]/g, '');
 
-  let cnpjArray = cnpj
+  const cnpjArray = cnpj
     .replace(/[^\d]+/g, '')
     .trim()
     .split('')
