@@ -16,6 +16,13 @@
   "rules": {
     "@typescript-eslint/no-explicit-any": 1,
     "no-console": 1,
-    "no-unused-vars": 1
+    "no-unused-vars": 1,
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ]
   }
 }
