@@ -5,7 +5,7 @@ export function validateCNPJ(cnpjReceveid: string | number) {
     .replace(/[^\d]+/g, '')
     .trim()
     .split('')
-    .map((char: any) => Number(char));
+    .map((char: string) => Number(char));
 
   let v1 = 0;
   let v2 = 0;
