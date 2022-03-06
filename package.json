@@ -19,7 +19,8 @@
     "clean": "rimraf lib",
     "build": "node ./scripts/build.js && tsc --project ./tsconfig.json --emitDeclarationOnly",
     "lint": "tsc --project ./tsconfig.json && eslint src -c .eslintrc.json --ext tsx,ts",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
