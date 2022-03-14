@@ -1,4 +1,4 @@
-export function verifyStrongPassword(password: string) {
+export function strongPassword(password: string) {
   const reasons: string[] = [];
   if (password.length < 8) {
     reasons.push('Password must be at least 8 characters long');
