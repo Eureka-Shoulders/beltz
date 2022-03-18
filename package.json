@@ -1,6 +1,6 @@
 {
   "name": "@euk-labs/beltz",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "main": "./cjs/index.js",
   "module": "./index.js",
   "types": "./index.d.ts",
@@ -19,8 +19,7 @@
     "clean": "rimraf lib",
     "build": "node ./scripts/build.js && tsc --project ./tsconfig.json --emitDeclarationOnly",
     "lint": "tsc --project ./tsconfig.json && eslint src -c .eslintrc.json --ext tsx,ts",
-    "test": "jest",
-    "prepare": "husky install"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
