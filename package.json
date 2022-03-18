@@ -1,6 +1,6 @@
 {
   "name": "@euk-labs/beltz",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "main": "./cjs/index.js",
   "module": "./index.js",
   "types": "./index.d.ts",
