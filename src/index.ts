@@ -4,3 +4,4 @@ export * from './date';
 export * from './object';
 export * from './regex';
 export * from './string';
+export * from './number';
