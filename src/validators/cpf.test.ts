@@ -1,4 +1,4 @@
-import { validateCPF } from './validation';
+import { validateCPF } from './cpf';
 
 describe('isValidCpf', () => {
   it('should return `true` if the cpf is valid', () => {

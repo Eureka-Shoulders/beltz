@@ -1,4 +1,4 @@
-import { removeDeepData } from './manipulation';
+import { removeDeepData } from './object';
 
 describe('removeDeepData', () => {
   const fields = ['password'];

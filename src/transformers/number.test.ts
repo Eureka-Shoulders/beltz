@@ -1,4 +1,4 @@
-import { formatToCurrency } from './manipulation';
+import { formatToCurrency } from './number';
 
 describe('formatToCurrency', () => {
   it('should return formatted currency', () => {
