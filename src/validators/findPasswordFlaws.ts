@@ -1,4 +1,10 @@
-export function strongPassword(password: string) {
+/**
+ *
+ * @param password string to be verified
+ * @returns null if valid or array of improvement points
+ */
+
+export function findPasswordFlaws(password: string) {
   const reasons: string[] = [];
   if (password.length < 8) {
     reasons.push('Password must be at least 8 characters long');

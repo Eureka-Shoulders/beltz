@@ -1,8 +1,4 @@
-import {
-  capitalizeString,
-  onlyNumbers,
-  removeWhitespace,
-} from './manipulation';
+import { capitalizeString, onlyNumbers, removeWhitespace } from './string';
 
 describe('capitalizeString', () => {
   it('should return a name capitalized', () => {

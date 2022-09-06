@@ -1,6 +1,6 @@
-import { validateCNPJ } from './validation';
+import { validateCNPJ } from './cnpj';
 
-describe('isValidCpf', () => {
+describe('isValidCNPJ', () => {
   it('should return `true` if the cnpj is valid', () => {
     const cnpj = '27155657000184';
     expect(validateCNPJ(cnpj)).toBe(true);
