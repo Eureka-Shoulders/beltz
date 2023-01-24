@@ -17,6 +17,7 @@
     "eureka",
     "utils",
     "formatters",
+    "validators",
     "beltz",
     "shoulders"
   ],
